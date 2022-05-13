@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">FitnessApp</string>
+    <string name="logout">Logout</string>
+    <string name="password">Password</string>
+    <string name="email_address">Email Address</string>
+    <string name="fitness_app">Fitness App</string>
+    <string name="login">Login</string>
+    <string name="if_you_don_t_have_an_account_click_here">If you don\'t have an account click here.</string>
+    <string name="title_activity_exercises_list">ExercisesList</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_exercises_view_all">ExercisesViewAll</string>
+    <string name="if_you_don_t_want_to_use_the_app_offline_click_here" />
+</resources>
