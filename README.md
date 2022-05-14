@@ -5,6 +5,8 @@ The API I am using is: https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb/ and
 
 For the favorite exercises list I am using SQLite Database.
 
+For the authentication and creating new accounts I am using Firebase. 
+
 
 Register page
 
