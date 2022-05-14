@@ -32,3 +32,12 @@ Single exercise details
 
 ![image](https://user-images.githubusercontent.com/103606543/168421522-2c59cfa2-c7b4-479b-9ad3-20c7c87abb33.png)
 ![image](https://user-images.githubusercontent.com/103606543/168421562-4a68a9b2-28d4-431e-b9b1-f44f7e575953.png)
+
+Random workout
+
+![image](https://user-images.githubusercontent.com/103606543/168428807-82b261aa-c0e6-44bb-b48a-003e91c9cc27.png)
+![image](https://user-images.githubusercontent.com/103606543/168428821-efdc045a-6380-4b47-8145-add770d98165.png)
+
+
+
+
