@@ -12,8 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.bumptech.glide.Glide;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import org.checkerframework.checker.units.qual.A;
-
 import pl.droidsonroids.gif.GifImageView;
 
 public class ExerciseActivity extends AppCompatActivity {
@@ -28,7 +26,7 @@ public class ExerciseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.exercise_activity);
+        setContentView(R.layout.activity_exercise);
 
         nameTxt = findViewById(R.id.textViewExNameS);
         bodyPartTxt = findViewById(R.id.textViewBodyPartS);
@@ -37,6 +35,7 @@ public class ExerciseActivity extends AppCompatActivity {
         targetTxt = findViewById(R.id.textViewTargetS);
         buttonAdd = findViewById(R.id.buttonAddToFavorite);
         buttonRemove = findViewById(R.id.buttonRemoveFromFavorite);
+
         MyDatabaseHelper myDB = new MyDatabaseHelper(ExerciseActivity.this);
 
         String name = "Name not set";
@@ -55,7 +54,6 @@ public class ExerciseActivity extends AppCompatActivity {
             target = extras.getString("target");
             id = extras.getString("id");
             backBtn = extras.getString("back");
-
         }
 
         if(myDB.itExists(id)){

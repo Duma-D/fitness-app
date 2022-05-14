@@ -38,4 +38,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), FavoriteListActivity.class);
         startActivity(intent);
     }
+
+    public void goToRandom(View view){
+        Intent intent = new Intent(getApplicationContext(), RandomWorkoutActivity.class);
+        startActivity(intent);
+    }
 }

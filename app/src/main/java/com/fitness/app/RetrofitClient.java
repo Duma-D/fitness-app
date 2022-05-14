@@ -12,6 +12,7 @@ public class RetrofitClient {
     private static final String BASE_URL="https://exercisedb.p.rapidapi.com/";
     private static Retrofit retrofit = null;
 
+
     public static ExerciseDbApi getRetrofitClient(){
         if(retrofit == null){
 
@@ -40,5 +41,6 @@ public class RetrofitClient {
 
         return retrofit.create(ExerciseDbApi.class);
     }
+
 
 }

@@ -34,6 +34,7 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.View
         this.listener = listener;
     }
 
+
     @NonNull
     @Override
     public ExercisesAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
