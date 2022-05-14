@@ -6,6 +6,23 @@
     android:layout_height="wrap_content"
     tools:context=".RandomWorkoutActivity">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingBtnBackRand"
+        android:layout_width="59dp"
+        android:layout_height="57dp"
+
+        android:layout_marginStart="8dp"
+        android:background="@color/pewter_blue"
+        android:clickable="true"
+        android:contentDescription="@string/previous"
+        android:onClick="backToMain"
+        android:visibility="visible"
+        app:backgroundTint="@color/pewter_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/img_1"
+        tools:visibility="visible" />
+
     <ProgressBar
         android:id="@+id/progressBarRandomExercises"
         style="?android:attr/progressBarStyle"
@@ -49,6 +66,7 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/oswald"
         android:hint="Chose a number from 1-30"
+        android:textAlignment="center"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

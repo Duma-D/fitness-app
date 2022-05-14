@@ -105,4 +105,9 @@ public class RandomWorkoutActivity extends AppCompatActivity {
         }
         return true;
     }
+
+    public void backToMain(View view){
+        Intent intent = new Intent(getApplicationContext(), Register.class);
+        startActivity(intent);
+    }
 }

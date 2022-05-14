@@ -105,6 +105,10 @@ public class ExerciseActivity extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), FavoriteListActivity.class);
             startActivity(intent);
         }
+        else if(backBtn.equals("random_list")){
+            Intent intent = new Intent(getApplicationContext(), RandomWorkoutActivity.class);
+            startActivity(intent);
+        }
     }
     public void isInFavorite(){
         buttonAdd.setVisibility(View.INVISIBLE);

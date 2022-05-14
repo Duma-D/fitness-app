@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -48,6 +49,7 @@ public class RandomByTarget extends AppCompatActivity {
             target = extras.getString("target").trim();
             number = Integer.parseInt(extras.getString("number"));
         }
+        setOnClickListener();
 
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
@@ -79,5 +81,22 @@ public class RandomByTarget extends AppCompatActivity {
                 Toast.makeText(RandomByTarget.this, "Error: " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void setOnClickListener() {
+        listener = new ExercisesAdapter.RecyclerViewClickListener() {
+            @Override
+            public void onClick(View v, int position) {
+                Intent intent = new Intent(getApplicationContext(), ExerciseActivity.class);
+                intent.putExtra("exercise name", byTargetLimited.get(position).getName());
+                intent.putExtra("body part", byTargetLimited.get(position).getBodyPart());
+                intent.putExtra("gif", byTargetLimited.get(position).getGifUrl());
+                intent.putExtra("equipment", byTargetLimited.get(position).getEquipment());
+                intent.putExtra("target", byTargetLimited.get(position).getTarget());
+                intent.putExtra("id", byTargetLimited.get(position).getId());
+                intent.putExtra("back", "random_list");
+                startActivity(intent);
+            }
+        };
     }
 }
