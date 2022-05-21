@@ -43,4 +43,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), RandomWorkoutActivity.class);
         startActivity(intent);
     }
+
+    public void goToViewTarget(View view){
+        Intent intent = new Intent(getApplicationContext(), ViewByTarget.class);
+        startActivity(intent);
+    }
 }

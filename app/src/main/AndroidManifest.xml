@@ -13,6 +13,9 @@
         android:theme="@style/Theme.FitnessApp"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ViewByTarget"
+            android:exported="false" />
+        <activity
             android:name=".RandomByTarget"
             android:exported="false" />
         <activity

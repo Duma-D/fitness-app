@@ -31,6 +31,19 @@
         android:text="RANDOM WORKOUT"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGoToTarget" />
+
+    <Button
+        android:id="@+id/btnGoToTarget"
+        android:layout_width="343dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="50dp"
+        android:onClick="goToViewTarget"
+        android:text="EXERCISES BY TARGET MUSCLES"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnGoToFavoriteExercises" />
 
     <TextView
