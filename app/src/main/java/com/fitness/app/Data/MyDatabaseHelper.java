@@ -1,4 +1,4 @@
-package com.fitness.app;
+package com.fitness.app.Data;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -69,7 +69,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    Cursor readAllData(){
+    public Cursor readAllData(){
         String query = "SELECT * FROM " + TABLE_NAME;
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -95,7 +95,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         return exists;
     }
 
-    void deleteOneRow(String id){
+    public void deleteOneRow(String id){
         SQLiteDatabase db = this.getWritableDatabase();
         long result = db.delete(TABLE_NAME, "_id=?", new String[]{id});
 

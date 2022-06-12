@@ -6,6 +6,7 @@
         <entry key="..\:/Users/duma_/AndroidStudioProjects/FitnessApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3675" />
         <entry key="..\:/Users/duma_/AndroidStudioProjects/FitnessApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3675" />
         <entry key="..\:/Users/duma_/AndroidStudioProjects/FitnessApp/app/src/main/res/layout/activity_all_exercises_list.xml" value="0.25" />
+        <entry key="..\:/Users/duma_/AndroidStudioProjects/FitnessApp/app/src/main/res/layout/activity_exercise.xml" value="0.17831813576494426" />
         <entry key="..\:/Users/duma_/AndroidStudioProjects/FitnessApp/app/src/main/res/layout/activity_exercises_all.xml" value="0.17831813576494426" />
         <entry key="..\:/Users/duma_/AndroidStudioProjects/FitnessApp/app/src/main/res/layout/activity_exercises_list.xml" value="0.17831813576494426" />
         <entry key="..\:/Users/duma_/AndroidStudioProjects/FitnessApp/app/src/main/res/layout/activity_exercises_list2.xml" value="0.18802083333333333" />
@@ -19,6 +20,7 @@
         <entry key="..\:/Users/duma_/AndroidStudioProjects/FitnessApp/app/src/main/res/layout/activity_random_by_target.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/duma_/AndroidStudioProjects/FitnessApp/app/src/main/res/layout/activity_random_workout.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/duma_/AndroidStudioProjects/FitnessApp/app/src/main/res/layout/activity_register.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/duma_/AndroidStudioProjects/FitnessApp/app/src/main/res/layout/activity_settings.xml" value="0.5" />
         <entry key="..\:/Users/duma_/AndroidStudioProjects/FitnessApp/app/src/main/res/layout/activity_view_by_target.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/duma_/AndroidStudioProjects/FitnessApp/app/src/main/res/layout/content_exercises_list.xml" value="0.5" />
         <entry key="..\:/Users/duma_/AndroidStudioProjects/FitnessApp/app/src/main/res/layout/content_exercises_view_all.xml" value="0.33" />
@@ -28,6 +30,8 @@
         <entry key="..\:/Users/duma_/AndroidStudioProjects/FitnessApp/app/src/main/res/layout/list_items.xml" value="0.6158273381294964" />
         <entry key="..\:/Users/duma_/AndroidStudioProjects/FitnessApp/app/src/main/res/layout/list_row_exercises.xml" value="0.17831813576494426" />
         <entry key="..\:/Users/duma_/AndroidStudioProjects/FitnessApp/app/src/main/res/layout/list_targets.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/duma_/AndroidStudioProjects/FitnessApp/app/src/main/res/layout/settings_activity.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/duma_/AndroidStudioProjects/FitnessApp/app/src/main/res/xml/root_preferences.xml" value="0.18802083333333333" />
       </map>
     </option>
   </component>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.fitness.app">
+    package="com.fitness.app" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,28 +11,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FitnessApp"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true" >
         <activity
-            android:name=".ViewByTarget"
+            android:name=".Activities.SettingsActivity"
             android:exported="false" />
         <activity
-            android:name=".RandomByTarget"
+            android:name=".Activities.ViewByTargetActivity"
             android:exported="false" />
         <activity
-            android:name=".RandomWorkoutActivity"
+            android:name=".Activities.ExercisesByTarget"
             android:exported="false" />
         <activity
-            android:name=".FavoriteListActivity"
+            android:name=".Activities.RandomWorkoutActivity"
             android:exported="false" />
         <activity
-            android:name=".ExercisesViewAll"
+            android:name=".Activities.FavoriteListActivity"
             android:exported="false" />
         <activity
-            android:name=".ExerciseActivity"
+            android:name=".Activities.ExercisesViewAll"
             android:exported="false" />
         <activity
-            android:name=".Login"
-            android:exported="true">
+            android:name=".Activities.ExerciseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Login"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -40,8 +43,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Register"
-            android:exported="true">
+            android:name=".Activities.Register"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -49,8 +52,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".Activities.MainActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

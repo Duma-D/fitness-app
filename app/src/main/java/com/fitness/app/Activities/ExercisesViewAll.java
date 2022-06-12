@@ -1,18 +1,19 @@
-package com.fitness.app;
+package com.fitness.app.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.fitness.app.Data.Exercise;
+import com.fitness.app.Data.ExercisesAdapter;
+import com.fitness.app.R;
+import com.fitness.app.Data.RetrofitClient;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +29,6 @@ public class ExercisesViewAll extends AppCompatActivity {
     ExercisesAdapter adapter;
     List<Exercise> exerciseList = new ArrayList<>();
     private ExercisesAdapter.RecyclerViewClickListener listener;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +47,6 @@ public class ExercisesViewAll extends AppCompatActivity {
         fetchExercises();
 
     }
-
 
     private void setOnClickListener() {
         listener = new ExercisesAdapter.RecyclerViewClickListener() {

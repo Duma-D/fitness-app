@@ -1,8 +1,10 @@
-package com.fitness.app;
+package com.fitness.app.Activities;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -13,18 +15,18 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
+import com.fitness.app.R;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-import pl.droidsonroids.gif.GifImageView;
-
 public class Login extends AppCompatActivity {
     EditText mEmail, mPassword;
     Button mLoginBtn;
-    TextView mGoToCreateAccount, mGoToOffline;
+    TextView mGoToCreateAccount, mGoToOffline, mForgotPassword;
     ProgressBar progressBar;
     FirebaseAuth fAuth;
 
@@ -41,6 +43,7 @@ public class Login extends AppCompatActivity {
         mLoginBtn = findViewById(R.id.buttonLogin);
         mGoToCreateAccount = findViewById(R.id.textViewGoToRegister);
         mGoToOffline = findViewById(R.id.textViewGoToOffline);
+        mForgotPassword = findViewById(R.id.forgotPassword);
 
         if(fAuth.getCurrentUser() != null){
             startActivity(new Intent(getApplicationContext(), MainActivity.class));  //verific daca userul este deja conectat
@@ -105,11 +108,51 @@ public class Login extends AppCompatActivity {
             }
         });
 
+        mForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final EditText resetMail = new EditText(view.getContext());
+                final AlertDialog.Builder passwordReset = new AlertDialog.Builder(view.getContext());
+                passwordReset.setTitle("Reset password?");
+                passwordReset.setMessage("Enter your email to recieve the reset link.");
+                passwordReset.setView(resetMail);
+
+                passwordReset.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                        String mail = resetMail.getText().toString();
+                        fAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+                                Toast.makeText(Login.this, "Reset link sent to your mail.", Toast.LENGTH_SHORT).show();
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(Login.this, "Error! Reset link not sent to your mail. " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+                });
+
+                passwordReset.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+
+                passwordReset.create().show();
+            }
+        });
+
     }
 
     public void goToRegister(View view){
         Intent intent = new Intent(getApplicationContext(), Register.class);
         startActivity(intent);
     }
+
 
 }

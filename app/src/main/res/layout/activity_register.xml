@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/wallpaper"
-    tools:context=".Register">
+    tools:context=".Activities.Register">
 
     <EditText
         android:id="@+id/passwordRegister"
@@ -35,7 +35,7 @@
         android:layout_marginEnd="16dp"
         android:background="@color/light_gray"
         android:ems="10"
-        android:inputType="textEmailAddress"
+        android:inputType="number"
         android:padding="10dp"
         android:hint="Phone Number"
         android:text=""

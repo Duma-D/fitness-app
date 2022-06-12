@@ -1,4 +1,6 @@
-package com.fitness.app;
+package com.fitness.app.Data;
+
+import com.fitness.app.Data.ExerciseDbApi;
 
 import java.io.IOException;
 

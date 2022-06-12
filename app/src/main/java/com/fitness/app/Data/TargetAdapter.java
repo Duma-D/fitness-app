@@ -1,4 +1,4 @@
-package com.fitness.app;
+package com.fitness.app.Data;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.fitness.app.R;
 
 import java.util.List;
 

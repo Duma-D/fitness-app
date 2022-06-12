@@ -1,4 +1,4 @@
-package com.fitness.app;
+package com.fitness.app.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,6 +10,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import com.fitness.app.R;
+import com.fitness.app.Data.RetrofitClient;
+import com.fitness.app.Data.TargetAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -79,7 +83,7 @@ public class RandomWorkoutActivity extends AppCompatActivity {
                 String number = "";
                 if(!mNumber.getText().toString().equals("") && isNumeric(mNumber.getText().toString())){
                     number = mNumber.getText().toString();
-                    Intent intent = new Intent(getApplicationContext(), RandomByTarget.class);
+                    Intent intent = new Intent(getApplicationContext(), ExercisesByTarget.class);
 
                     intent.putExtra("target", targetMuscles.get(position));
                     intent.putExtra("number", number);

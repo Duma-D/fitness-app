@@ -1,4 +1,4 @@
-package com.fitness.app;
+package com.fitness.app.Data;
 
 public class Exercise {
     private String bodyPart;

@@ -1,23 +1,17 @@
-package com.fitness.app;
+package com.fitness.app.Data;
 
-import android.app.Activity;
-import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.Transformation;
-import com.bumptech.glide.load.engine.GlideException;
-import com.bumptech.glide.request.RequestOptions;
+import com.fitness.app.Activities.MainActivity;
+import com.fitness.app.R;
 
 import java.util.List;
 

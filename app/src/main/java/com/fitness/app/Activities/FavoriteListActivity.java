@@ -1,4 +1,4 @@
-package com.fitness.app;
+package com.fitness.app.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,6 +9,11 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import com.fitness.app.Data.Exercise;
+import com.fitness.app.Data.ExercisesAdapter;
+import com.fitness.app.Data.MyDatabaseHelper;
+import com.fitness.app.R;
 
 import java.util.ArrayList;
 import java.util.List;

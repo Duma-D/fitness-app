@@ -1,4 +1,4 @@
-package com.fitness.app;
+package com.fitness.app.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,15 +10,19 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.fitness.app.Data.Exercise;
+import com.fitness.app.Data.ExercisesAdapter;
+import com.fitness.app.Data.RetrofitClient;
+import com.fitness.app.R;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class RandomByTarget extends AppCompatActivity {
+public class ExercisesByTarget extends AppCompatActivity {
 
     RecyclerView recyclerView;
     List<Exercise> byTargetList;
@@ -47,13 +51,22 @@ public class RandomByTarget extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         if (extras != null){
             target = extras.getString("target").trim();
-            number = Integer.parseInt(extras.getString("number"));
+
+            if (extras.getString("number").equals("all"))
+                number = byTargetList.size();
+            else
+                number = Integer.parseInt(extras.getString("number"));
         }
         setOnClickListener();
 
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        adapter = new ExercisesAdapter(byTargetLimited, listener);
+
+        if (!extras.getString("number").equals("all"))
+            adapter = new ExercisesAdapter(byTargetLimited, listener);
+        else
+            adapter = new ExercisesAdapter(byTargetList, listener);
+
         recyclerView.setAdapter(adapter);
 
         fetchExercises();
@@ -78,7 +91,7 @@ public class RandomByTarget extends AppCompatActivity {
             @Override
             public void onFailure(Call<List<Exercise>> call, Throwable t) {
                 progressBar.setVisibility(View.GONE);
-                Toast.makeText(RandomByTarget.this, "Error: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(ExercisesByTarget.this, "Error: " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -99,4 +112,9 @@ public class RandomByTarget extends AppCompatActivity {
             }
         };
     }
+    public void backToMain(View view){
+        Intent intent = new Intent(getApplicationContext(), Register.class);
+        startActivity(intent);
+    }
+
 }

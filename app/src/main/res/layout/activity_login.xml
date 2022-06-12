@@ -5,14 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/wallpaper"
-    tools:context=".Login">
+    tools:context=".Activities.Login">
+
+    <TextView
+        android:id="@+id/forgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="100dp"
+        android:clickable="true"
+        android:fontFamily="@font/oswald"
+        android:text="Forgot password?"
+        android:textColor="#00403A"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewGoToOffline"
+        android:focusable="true" />
 
     <TextView
         android:id="@+id/textViewGoToOffline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="100dp"
         android:clickable="true"
         android:fontFamily="@font/oswald"
@@ -20,9 +38,9 @@
         android:textColor="#00403A"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewGoToRegister" />
 
     <EditText
         android:id="@+id/passwordLogin"
@@ -101,7 +119,7 @@
         android:layout_width="300dp"
         android:layout_height="62dp"
         android:layout_marginStart="98dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="98dp"
         android:backgroundTint="@color/main_blue_saphire"
         android:fontFamily="@font/oswald"
