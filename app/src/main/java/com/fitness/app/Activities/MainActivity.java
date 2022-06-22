@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                     assert value != null;
-                    textView.setText("Welcome back, " + value.getString("fName"));
+                    textView.setText("Welcome back, " + value.getString("fName") + "!");
                 }
             });
         }

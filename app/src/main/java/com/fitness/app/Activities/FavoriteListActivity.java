@@ -77,7 +77,7 @@ public class FavoriteListActivity extends AppCompatActivity {
     }
 
     public void backToMain(View view){
-        Intent intent = new Intent(getApplicationContext(), Register.class);
+        Intent intent = new Intent(getApplicationContext(), Login.class);
         startActivity(intent);
     }
 
